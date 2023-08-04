@@ -10,7 +10,7 @@ public class MovementJoystick : MonoBehaviour
     private Vector2 joystickTouchPos;
     private Vector2 joystickOriginPos;
     private float joystickRadius;
-    
+
 
     void Start()
     {
@@ -33,9 +33,9 @@ public class MovementJoystick : MonoBehaviour
 
         float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
 
-        if(joystickDist < joystickRadius)
+        if (joystickDist < joystickRadius)
         {
-            joystick.transform.position = joystickTouchPos + joystickVec * joystickDist * Time.deltaTime;
+            joystick.transform.position = joystickTouchPos + joystickVec * joystickDist;
         }
 
         else
