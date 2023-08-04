@@ -18,6 +18,7 @@ public class MovementJoystick : MonoBehaviour
         joystickRadius = joystickBG.GetComponent<RectTransform>().sizeDelta.y / 4;
     }
 
+    // 터치 시작
     public void PointerDown()
     {
         joystick.transform.position = Input.mousePosition;
@@ -25,6 +26,8 @@ public class MovementJoystick : MonoBehaviour
         joystickTouchPos = Input.mousePosition;
     }
 
+
+    // 드래그 할 때
     public void Drag(BaseEventData baseEventData)
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
@@ -44,6 +47,8 @@ public class MovementJoystick : MonoBehaviour
         }
     }
 
+
+    // 터치 종료
     public void PointerUP()
     {
         joystickVec = Vector2.zero;
